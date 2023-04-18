@@ -19,11 +19,17 @@ const {tasks} = useTasks()
         </button>
       </Link>
       <div>
+      {tasks.length === 0 ? (
+        <div className='flex justify-center'>
+        <h2 className="text-2xl">There are no tasks 📚</h2>
+        </div>
+      ) :
         <div className="w-7/10">
           {tasks.map((e, i) => (
             <TaskCard key={i} id={e.id} title={e.title} desc={e.desc} />
           ))}
         </div>
+      } 
       </div>
     </div>
   );

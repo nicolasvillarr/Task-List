@@ -9,10 +9,6 @@ function TaskCard({ id, title, desc }) {
 
   const { deleteTask } = useTasks();
 
-  if (title == undefined) {
-    return <div></div>;
-  }
-
   return (
     <div
     className="bg-gray-700 hover:bg-gray-600 cursor-pointer px-20 py-5 m-2 flex justify-between"
